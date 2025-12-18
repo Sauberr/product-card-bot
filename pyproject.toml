@@ -1,0 +1,17 @@
+[project]
+name = "test-task"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "aiogram>=3.22.0",
+    "aiosqlite>=0.21.0",
+    "betterlogging>=1.0.0",
+    "greenlet>=3.2.4",
+    "isort>=6.0.1",
+    "loguru>=0.7.3",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "ruff>=0.12.10",
+    "sqlalchemy>=2.0.43",
+]
