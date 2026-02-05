@@ -1,4 +1,4 @@
-# Test Task for Init Telegram Bot
+# Product card tg bot
 
 Телеграм-бот для управления карточками товаров с системой модерации и админ-панелью.
 
@@ -180,4 +180,5 @@ uv add package_name
 ### Обновление зависимостей
 ```bash
 uv pip install --upgrade -e .
+
 ```
