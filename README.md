@@ -1,37 +1,37 @@
 # Product card tg bot
 
-Телеграм-бот для управления карточками товаров с системой модерации и админ-панелью.
+Telegram bot for managing product cards with a moderation system and admin panel.
 
-## 🚀 Что умеет бот
+## 🚀 Features
 
-### Для пользователей:
-- **Добавление товаров** - создание карточек с названием, описанием, ценой и фото
-- **Просмотр товаров** - пагинация по одобренным карточкам
-- **Система модерации** - все товары проходят проверку администратором
+### For users:
+- **Adding products** - creating cards with name, description, price, and photo
+- **Viewing products** - pagination through approved cards
+- **Moderation system** - all products undergo review by an administrator
 
-### Для администраторов:
-- **Модерация товаров** - одобрение/отклонение/удаление карточек
-- **Редактирование товаров** - изменение любых атрибутов карточек
-- **Статистика** - просмотр данных по пользователям и их товарам
-- **Полный контроль** - управление всеми товарами в системе
+### For administrators:
+- **Product moderation** - approving/rejecting/deleting cards
+- **Product editing** - changing any card attributes
+- **Statistics** - viewing data on users and their products
+- **Full control** - managing all products in the system
 
-## 🛠 Технологии
+## 🛠 Technologies
 
-- **Python 3.12** - современная версия с улучшенной производительностью
-- **aiogram 3.22.0** - асинхронный фреймворк для Telegram Bot API
-- **SQLAlchemy 2.0** - современный ORM для работы с базой данных
-- **SQLite** - легкая встроенная база данных
-- **Pydantic** - валидация данных и настроек
-- **uv** - сверхбыстрый пакетный менеджер для Python
+- **Python 3.12** - modern version with improved performance
+- **aiogram 3.22.0** - asynchronous framework for Telegram Bot API
+- **SQLAlchemy 2.0** - modern ORM for database management
+- **SQLite** - lightweight embedded database
+- **Pydantic** - data and settings validation
+- **uv** - ultra-fast package manager for Python
 
-## ⚡ Быстрый запуск
+## ⚡ Quick Start
 
-### 1. Создание виртуального окружения
+### 1. Creating a virtual environment
 ```bash
 uv venv --python 3.12
 ```
 
-### 2. Активация окружения
+### 2. Activating the enviroment
 
 **Windows:**
 ```bash
@@ -43,19 +43,19 @@ uv venv --python 3.12
 source .venv/bin/activate
 ```
 
-### 3. Установка зависимостей
+### 3. Installing dependencies
 ```bash
 uv sync
 ```
 
-### 4. Настройка переменных окружения
+### 4. Environment variale configuration
 
-Скопируйте `example.env` в `.env`:
+Copy `example.env` в `.env`:
 ```bash
 cp example.env .env
 ```
 
-Отредактируйте `.env` файл:
+Edit `.env` file:
 ```env
 BOT_TOKEN=your_bot_token_here
 ADMIN_IDS=123456789,987654321
@@ -63,25 +63,25 @@ DATABASE_URL=sqlite+aiosqlite:///./products.db
 DB_ECHO=False
 ```
 
-### 5. Получение токена бота
+### 5. Getting the bot token
 
-1. Найдите [@BotFather](https://t.me/BotFather) в Telegram
-2. Отправьте команду `/newbot`
-3. Следуйте инструкциям для создания бота
-4. Скопируйте полученный токен в `.env`
+1. Find [@BotFather](https://t.me/BotFather) on Telegram
+2. Send the `/newbot` command
+3. Follow the instructions to create a bot
+4. Copy the received token into `.env`
 
-### 6. Получение ID администратора
+### 6. Getting an administrator ID
 
-1. Найдите [@userinfobot](https://t.me/userinfobot) в Telegram
-2. Отправьте любое сообщение
-3. Скопируйте ваш ID в `ADMIN_IDS` в `.env`
+1. Find [@userinfobot](https://t.me/userinfobot) on Telegram
+2. Send any message
+3. Copy your ID into `ADMIN_IDS` in `.env`
 
-### 7. Запуск бота
+### 7. Running the bot
 ```bash
 python app.py
 ```
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
 test-task/
@@ -163,21 +163,21 @@ test-task/
 
 ```
 
-## 🎯 Основные команды
+## 🎯 Basic Commands
 
-- `/start` - запуск бота и главное меню
-- `/admin` - админ-панель (только для администраторов)
-- `/cancel` - отмена текущего действия
-- `/back` - возврат к предыдущему шагу
+- `/start` - bot startup and main menu
+- `/admin` - admin panel (for administrators only)
+- `/cancel` - canceling the current action
+- `/back` - return to the previous step
 
-## 🔧 Разработка
+## 🔧 Development
 
-### Добавление новых зависимостей
+### Adding new dependencies
 ```bash
 uv add package_name
 ```
 
-### Обновление зависимостей
+### Updating dependencies
 ```bash
 uv pip install --upgrade -e .
 
