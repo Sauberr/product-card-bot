@@ -1,23 +1,17 @@
-бот должен предоставлять возможность пользователям добавлять карточки товаров. у карточек должны быть атрибуты: название, описание, цена, фото (опционально). 
+The bot must provide users with the ability to add product cards. The cards should have the following attributes: name, description, price, and photo (optional).
 
-в меню должны быть кнопки: "Добавить карточку" и "Посмотреть карточки". 
+The main menu must include the buttons: "Add Product Card" and "View Product Cards."
+- Upon clicking the first button, the bot should collect information about the card from the user in a multi-step process and then send it for moderation.
+- Upon clicking the second button, the bot should send the first card from the database with inline buttons. The "«" and "»" buttons should switch between product cards, allowing users to view them all.
 
-по нажатию на первую кнопку бот должен в несколько шагов принимать от пользователя информацию о карточке и потом отправлять её на модерацию. 
+There must also be an Admin Menu. It can be accessed via an "Admin Menu" button, which should be present in the keyboard for admins but not for regular users.
+The Admin Menu contains the following buttons: "Moderation," "Statistics," and "Back."
+- The "Moderation" button allows admins to moderate user cards and decide whether to approve or delete them. This section should also use an inline keyboard for pagination. Additionally, there should be an "Edit" inline button; clicking it should trigger a reply keyboard where an attribute can be selected and modified.
+- The "Statistics" button displays a list of users and the number of cards they have created (total, approved, and rejected).
+- The "Back" button returns the admin to the main keyboard.
 
-по нажатию на вторую кнопку бот должен присылать первую карточку из бд, с инлайн кнопками. кнопки "«" и "»" должны переключать карточки товаров, давая просматривать их все. 
-
-также должно быть админ меню. в него можно будет перейти по кнопке "Админ меню". эта кнопка должна быть в клавиатуре админов, но не у пользователей. 
-
-в админ меню кнопки: "Модерация", "Статистика", "Назад".
-
-кнопка "Модерация" позволяет модерировать карточки пользователей и решать: добавить карточку или удалить. такая же инлайн клавиатура для пролистывания. также должна быть инлайн кнопка "изменить". при нажатии на неё должна появляться reply клавиатура, в которой можно выбрать атрибут для изменения и поменять его.  
-
-кнопка "Статистика" выводит список пользователей и количество созданных ими карточек (всего, одобренных и отклонённых). 
-
-кнопка "Назад" возвращает главную клавиатуру.
-
-Предпочтения по выполнению: 
-1. модульная архитектура
-2. использование кастомных фильтров
-3. бд можно использовать sqlite/postgres
-4. логирование основных действий (можно использовать стандартный logger)
+Development Preferences:
+- Modular architecture
+- Use of custom filters
+- Database: SQLite or PostgreSQL
+- Logging of main actions (standard logger is acceptable)
